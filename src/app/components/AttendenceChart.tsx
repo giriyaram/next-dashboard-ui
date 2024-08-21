@@ -50,13 +50,28 @@ const AttendenceChart = () => {
         <Image src="/moreDark.png" alt="" width={20} height={20} />
       </div>
       {/* CHART  */}
-      <div className=" w-full h-[75%]">
+      <div className=" w-full h-full">
         <ResponsiveContainer width="100%" height="90%">
           <BarChart width={500} height={300} data={data} barSize={20}>
-            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#ddd" />
-            <XAxis dataKey="name" axisLine={false} tick={{fill:"#d1d5db"}} tickLine={false} />
-            <YAxis axisLine={false} />
-            <Tooltip />
+            <CartesianGrid
+              strokeDasharray="3 3"
+              vertical={false}
+              stroke="#ddd"
+            />
+            <XAxis
+              dataKey="name"
+              axisLine={false}
+              tick={{ fill: "#d1d5db" }}
+              tickLine={false}
+            />
+            <YAxis
+              axisLine={false}
+              tick={{ fill: "#d1d5db" }}
+              tickLine={false}
+            />
+            <Tooltip
+              contentStyle={{ borderRadius: "10px", borderColor: "lightgray" }}
+            />
             <Legend
               align="left"
               verticalAlign="top"
@@ -66,32 +81,16 @@ const AttendenceChart = () => {
               dataKey="present"
               fill="#FAE27C"
               legendType="circle"
-              radius={[10,10,0,0]}
+              radius={[10, 10, 0, 0]}
             />
             <Bar
               dataKey="absent"
               fill="#C3EBFA"
               legendType="circle"
-              radius={[10,10,0,0]}
+              radius={[10, 10, 0, 0]}
             />
           </BarChart>
         </ResponsiveContainer>
-      </div>
-      {/* BOTTOM */}
-      <div className="flex justify-center items-center gap-16">
-        {/* boys */}
-        <div className="flex flex-col gap-1">
-          <div className="w-5 h-5 bg-lamaSky rounded-full " />
-          <h1 className="font-bold">1,234</h1>
-          <h2 className="text-xs text-gray-300">Boys (55%)</h2>
-        </div>
-
-        {/* girls */}
-        <div className="flex flex-col gap-1">
-          <div className="w-5 h-5 bg-lamaYellow rounded-full " />
-          <h1 className="font-bold">1,134</h1>
-          <h2 className="text-xs text-gray-300">Girls (45%)</h2>
-        </div>
       </div>
     </div>
   );

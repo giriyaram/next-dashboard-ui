@@ -68,7 +68,7 @@ const ResultListPage = () => {
         <div className="flex items-center gap-2">
           <Link href={`/list/teachers/${item.id}`}>
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaSky">
-              <Image src="/edit.png" alt="" width={16} height={16} />
+              <Image src="/update.png" alt="" width={16} height={16} />
             </button>
           </Link>
           {role === "admin" && (
@@ -99,7 +99,7 @@ const ResultListPage = () => {
             </button>
             {role === "admin" && (
               <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
-                <Image src="/plus.png " alt="" width={20} height={20} />
+                <Image src="/create.png.png " alt="" width={20} height={20} />
               </button>
             )}
           </div>

@@ -75,7 +75,7 @@ const LessonListPage = () => {
             </button>
             {role === "admin" && (
               <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
-                <Image src="/create.png.png " alt="" width={20} height={20} />
+                <Image src="/create.png " alt="" width={20} height={20} />
               </button>
             )}
           </div>
